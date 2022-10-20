@@ -1,15 +1,12 @@
-$color1:#FFF;
-$color2:#181818;
-$color3:#b9b3b3;
+@import "resets";
+@import "variables";
+
 
 html {
     h1 {text-align: center;}
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    
-}
+    }
 
 body {
     height: 100%;
@@ -36,7 +33,7 @@ body {
     .menu li a {
         display: inline-block;
         text-decoration: none;
-        color:$color1;
+        color:$white;
         text-align: center;
         transition: 0.15s ease-in-out;
         position: relative;
@@ -50,7 +47,7 @@ body {
     left: 0;
     width: 0;
     height: 1px;
-    background-color: $color1;
+    background-color: $white;
     transition: 0.15s ease-in-out;
     }
     .menu li a:hover:after {width: 100%;}
@@ -58,7 +55,7 @@ body {
     .open-menu, .close-menu  {
         
         position: absolute;
-        color: $color1;
+        color: $white;
         cursor: pointer;
         font-size: 1.6rem;
         display: none;
@@ -88,13 +85,14 @@ body {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 80%;
-            height: 100vh;
+            width: 40%;
+            height: 60vh;
+            border-radius: 10%;
             position: fixed;
             top: 0;
             right: -100%;
             z-index: 100;
-            background-color: $color2;
+            background-color: rgba(0, 0, 0, 0.384);
             transition: all 0.3s ease-in-out;
         }
         .menu li {margin-top: 40px;}
@@ -117,7 +115,7 @@ body {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                color: $color1;
+                color: $white;
                 text-align: center;
                 }
     }
@@ -137,13 +135,14 @@ body {
     
     .quote{
         display: flex;
-        background-color: $color3;
+        background-color: $quote-bg-color;
         font-size: large;
         width: 515px;
         height: 90px;
         position: relative;
         justify-content: center;
         align-items: center;
+        border-radius: 3%;
         
     }
     .profile {
@@ -152,6 +151,9 @@ body {
     padding-left: 5%;
     padding-right: 5%;
     text-align: center;
+        .fa-solid{
+            &.fa-quote-right{align-content: center;}
+        } 
     
     
         
@@ -183,8 +185,8 @@ body {
 footer{
     
     
-    background-color: $color2;
-    color:$color1;
+    background-color: $black;
+    color:$white;
     font-size: larger;
     display: flex;    
     justify-content: space-evenly;
@@ -192,7 +194,6 @@ footer{
     width: 98vw;
     height: 100%;
     position: relative;
-    
     
     
       .contact-info {
@@ -203,10 +204,11 @@ footer{
         flex-flow: row wrap;        
         padding-top: 3%;
         padding-bottom: 2%;
+        justify-content: center;   
         
-        justify-content: center;
+            
         
-              
     }
+
     
 }
